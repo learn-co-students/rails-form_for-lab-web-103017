@@ -38,3 +38,872 @@ Started GET "/" for ::1 at 2015-11-18 13:37:10 -0600
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/admin/.rvm/gems/ruby-2.1.2/gems/railties-4.2.3/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
 Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes" for ::1 at 2017-11-28 15:43:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (155.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClasses (20171128195710)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171128195710"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/school_classes" for ::1 at 2017-11-28 15:44:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#index as HTML
+  Rendered school_classes/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/paul/Development/labs/Module 2/rails/crud/rails-form_for-lab-web-103017/app/views/school_classes/index.html.erb:3: syntax error, unexpected keyword_class, expecting '|'
+'.freeze;  @school_classes.each do |class|
+                                         ^
+/Users/paul/Development/labs/Module 2/rails/crud/rails-form_for-lab-web-103017/app/views/school_classes/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/school_classes/index.html.erb:3: syntax error, unexpected keyword_class, expecting '|'
+  app/views/school_classes/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (135.3ms)
+
+
+Started GET "/school_classes" for ::1 at 2017-11-28 15:45:41 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.5ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 1551ms (Views: 1549.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/school_classes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2017-11-28 15:45:42 -0500
+
+
+Started GET "/assets/school_classes.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-11-28 15:45:42 -0500
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:45:48 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 96ms (Views: 85.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:47:13 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 106ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:47:35 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 79ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:47:50 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I0C8igQnW9S/3CGXUnX94/T5vHIFvQ9V1jr0zUnV7m7/IIOApCZALs30/o1e+O8j+AT15HRgQVzHF/ChXgkqKQ==", "school_class"=>{"title"=>"Butts", "room_number"=>"404"}, "commit"=>"Create School class"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'name' for SchoolClass.):
+  app/controllers/school_classes_controller.rb:7:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (142.4ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:49:26 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I0C8igQnW9S/3CGXUnX94/T5vHIFvQ9V1jr0zUnV7m7/IIOApCZALs30/o1e+O8j+AT15HRgQVzHF/ChXgkqKQ==", "school_class"=>{"title"=>"Butts", "room_number"=>"404"}, "commit"=>"Create School class"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-11-28 20:49:26.954204"], ["updated_at", "2017-11-28 20:49:26.954204"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 3.4ms)
+
+NoMethodError (undefined method `student_path' for #<SchoolClassesController:0x007f9ba12296f8>
+Did you mean?  students_path):
+  app/controllers/school_classes_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (147.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:49:41 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I0C8igQnW9S/3CGXUnX94/T5vHIFvQ9V1jr0zUnV7m7/IIOApCZALs30/o1e+O8j+AT15HRgQVzHF/ChXgkqKQ==", "school_class"=>{"title"=>"Butts", "room_number"=>"404"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-11-28 20:49:41.447401"], ["updated_at", "2017-11-28 20:49:41.447401"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 2.6ms)
+
+NoMethodError (undefined method `student_path' for #<SchoolClassesController:0x007f9b9e68ea98>
+Did you mean?  students_path):
+  app/controllers/school_classes_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (148.0ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:49:47 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 87ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:50:03 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0c+itqN4Z5aakeNvW6pIEhazHYaEI5YDmDZAfFo8Rr4Nr528A3l8bOi5PHVXJ1rSGk5UEPX+2AqJG0QQTeCC+Q==", "school_class"=>{"title"=>"twinkle-weaving", "room_number"=>"666"}, "commit"=>"Create School class"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-11-28 20:50:03.444048"], ["updated_at", "2017-11-28 20:50:03.444048"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.2ms)
+
+NoMethodError (undefined method `student_path' for #<SchoolClassesController:0x007f9ba1501830>
+Did you mean?  students_path):
+  app/controllers/school_classes_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (141.2ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:50:27 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 101ms (Views: 90.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:50:38 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MmdSRS9lECcUnvX1QAIzOWeeEOE7k4sUstfHzwJf49LuB21Pj2QL3Wa2Ku9MjyH5a2NZd0pOxR2j+sOjFYMnlQ==", "school_class"=>{"title"=>"barfology", "room_number"=>"1234"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-11-28 20:50:38.785691"], ["updated_at", "2017-11-28 20:50:38.785691"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.5ms)
+
+NoMethodError (undefined method `student_path' for #<SchoolClassesController:0x007f9ba02bade8>
+Did you mean?  students_path):
+  app/controllers/school_classes_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (66.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (156.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:51:01 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MmdSRS9lECcUnvX1QAIzOWeeEOE7k4sUstfHzwJf49LuB21Pj2QL3Wa2Ku9MjyH5a2NZd0pOxR2j+sOjFYMnlQ==", "school_class"=>{"title"=>"barfology", "room_number"=>"1234"}, "commit"=>"Create School class"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-11-28 20:51:02.007371"], ["updated_at", "2017-11-28 20:51:02.007371"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 5.0ms)
+
+NoMethodError (undefined method `to' for #<SchoolClassesController:0x007f9ba006aa20>
+Did you mean?  to_s
+               to_a
+               t):
+  app/controllers/school_classes_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (129.5ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:53:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 256ms (Views: 223.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:54:07 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/v6sAQNyGzBiqtM4NXkHU3yK/3/ov6dR2VyEPqeb4+Hm8W6pAzTlrOidFbsWPbdQQ9ia45/sJRWSHZ87UKryA==", "school_class"=>{"title"=>"field dressing 101", "room_number"=>"202"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-11-28 20:54:07.915244"], ["updated_at", "2017-11-28 20:54:07.915244"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/school_classes/6
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/school_classes/6" for ::1 at 2017-11-28 15:54:07 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered school_classes/show.html.erb within layouts/application (13.8ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `name' for #<SchoolClass:0x007ff6e15915c0>):
+    1: <h1><%=@school_class.name %></h1>
+    2: <p><%=@school_class.room_number %></p>
+  app/views/school_classes/show.html.erb:1:in `_app_views_school_classes_show_html_erb___3928863145333676169_70349159666160'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (72.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (165.4ms)
+
+
+Started GET "/school_classes/6" for ::1 at 2017-11-28 15:54:57 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSchoolClass Load (0.2ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered school_classes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 74ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 15:55:19 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 15:55:29 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SvqR+7JaY0siF2Vv/NaNDzVvF53hqTfuNCApNjjsHWaWmq7xElt4sVA/unXwW5/POZJeC5B0eeclDS1aLzDZIQ==", "school_class"=>{"title"=>"coolguy ", "room_number"=>"777"}, "commit"=>"Create School class"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2017-11-28 20:55:29.212884"], ["updated_at", "2017-11-28 20:55:29.212884"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/7
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/school_classes/7" for ::1 at 2017-11-28 15:55:29 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mSchoolClass Load (1.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 93ms (Views: 84.4ms | ActiveRecord: 1.1ms)
+  [1m[36mSchoolClass Load (2.4ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 16:01:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 256ms (Views: 227.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 16:01:24 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlceIZd05jfExylG0LS+k7OOdVASQukRWCe3eOFjIB5aNyErN3X9zbbv9lzcOaxTv3M8xmOfpxhJCrMU9r/kWQ==", "school_class"=>{"title"=>"grub", "room_number"=>"123"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-11-28 21:01:24.767666"], ["updated_at", "2017-11-28 21:01:24.767666"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/school_classes/8
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/school_classes/8" for ::1 at 2017-11-28 16:01:24 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mSchoolClass Load (3.4ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered school_classes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 98ms (Views: 73.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 16:02:47 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 105ms (Views: 93.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 16:02:56 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8mIc2SPRaXGdm9rxf2HfI46AlXG5z2wPS9+qVClBhlUuAiPTg9Byi++zBetz7M3jgn3c58gSIgZa8q44Pp1CEg==", "school_class"=>{"title"=>"thinking", "room_number"=>"10"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "school_classes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-11-28 21:02:56.785257"], ["updated_at", "2017-11-28 21:02:56.785257"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/school_classes/9
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/school_classes/9" for ::1 at 2017-11-28 16:02:56 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered school_classes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 99ms (Views: 96.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 16:05:33 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 79ms (Views: 57.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 16:05:40 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QifW1QuMHtAkXyJXOeEone9R7UE6YkbdM4waIF9V8WqeR+nfq40FKlZ3/U01bDpd46yk10u/CNQioR5MSIk1LQ==", "school_class"=>{"title"=>"testing", "room_number"=>"11"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "testing"], ["room_number", 11], ["created_at", "2017-11-28 21:05:40.112640"], ["updated_at", "2017-11-28 21:05:40.112640"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/school_classes/10
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/school_classes/10" for ::1 at 2017-11-28 16:05:40 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered school_classes/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes" for ::1 at 2017-11-28 16:06:34 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[35mSchoolClass Load (0.5ms)[0m  SELECT "school_classes".* FROM "school_classes"
+  Rendered school_classes/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 105ms (Views: 94.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/school_classes" for ::1 at 2017-11-28 16:28:23 -0500
+Processing by SchoolClassesController#index as HTML
+  [1m[36mSchoolClass Load (1.1ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
+  Rendered school_classes/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 113ms (Views: 98.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students" for ::1 at 2017-11-28 16:28:36 -0500
+Processing by StudentsController#index as HTML
+  [1m[35mStudent Load (0.9ms)[0m  SELECT "students".* FROM "students"
+  Rendered students/index.html.erb within layouts/application (28.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.7ms)
+
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <h1>Students</h1>
+    2: <ul>
+    3:   <%@students.each do |x|%>
+    4:   <li><%= x.to_s%></li>
+    5: <%end%>
+    6: </ul>
+  app/models/student.rb:3:in `to_s'
+  app/views/students/index.html.erb:4:in `block in _app_views_students_index_html_erb__3731409541822261944_70321404233560'
+  app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__3731409541822261944_70321404233560'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (131.5ms)
+
+
+Started GET "/students" for ::1 at 2017-11-28 16:29:36 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.9ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/students/new" for ::1 at 2017-11-28 16:29:50 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 113ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2017-11-28 16:29:56 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iW2LrvXSDtpqMZndI683tvEzEeDhf6o+w3bqEuuuvN9VDbSkVdMVIBgZRscvIiV2/c5YdpCi5DfSW+5+/HJ4mA==", "student"=>{"first_name"=>"butt", "last_name"=>"head"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "butt"], ["last_name", "head"], ["created_at", "2017-11-28 21:29:56.360220"], ["updated_at", "2017-11-28 21:29:56.360220"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.4ms)
+
+NoMethodError (undefined method `student_path' for #<StudentsController:0x007fe9f49a3d88>
+Did you mean?  students_path):
+  app/controllers/students_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.4ms)
+
+
+Started GET "/students" for ::1 at 2017-11-28 16:30:47 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.6ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 77ms (Views: 73.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students/new" for ::1 at 2017-11-28 16:30:52 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2017-11-28 16:30:58 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U9XqUW2du0DaHNMxGjgQ7CTeiQkNyb3OyrAZEKvXigiPtdVbzZyguqg0DCsWtQIsKCPAn3wU88fbnR18vAtOTw==", "student"=>{"first_name"=>"Beetle", "last_name"=>"Juice"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Beetle"], ["last_name", "Juice"], ["created_at", "2017-11-28 21:30:58.129522"], ["updated_at", "2017-11-28 21:30:58.129522"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.3ms)
+
+NoMethodError (undefined method `student_path' for #<StudentsController:0x007fe9f86b53c0>
+Did you mean?  students_path):
+  app/controllers/students_controller.rb:8:in `create'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.2ms)
+
+
+Started GET "/students" for ::1 at 2017-11-28 16:31:24 -0500
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.4ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 79ms (Views: 66.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/new" for ::1 at 2017-11-28 16:31:30 -0500
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 80ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2017-11-28 16:31:34 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BMVdNSFGlZOCsIiYSQHfzUqt/RPvfizzLXe9bOL0zDLYpWI/gUeOafCYV4JFjM0NRlC0hZ6jYvo8WrkA9SgIdQ==", "student"=>{"first_name"=>"Gwar", "last_name"=>"Fan"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Gwar"], ["last_name", "Fan"], ["created_at", "2017-11-28 21:31:34.596100"], ["updated_at", "2017-11-28 21:31:34.596100"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/students.5
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/students.5" for ::1 at 2017-11-28 16:31:34 -0500
+Processing by StudentsController#index as 
+  [1m[36mStudent Load (1.0ms)[0m  [1mSELECT "students".* FROM "students"[0m
+  Rendered students/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 103ms (Views: 100.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/5" for ::1 at 2017-11-28 16:33:09 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered students/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 80ms (Views: 69.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/new" for ::1 at 2017-11-28 16:36:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendered students/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 235ms (Views: 212.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/students" for ::1 at 2017-11-28 16:36:25 -0500
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5dxxW8WnHZV9S84fe9m2Ev0mBCzMhATQSPVHmQdwr6w5vE5RZaYGbw9jEQV3VKTS8dtNur1ZStlZ2EP1EKxr6w==", "student"=>{"first_name"=>"doug", "last_name"=>"funny"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "doug"], ["last_name", "funny"], ["created_at", "2017-11-28 21:36:25.037670"], ["updated_at", "2017-11-28 21:36:25.037670"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/6
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/students/6" for ::1 at 2017-11-28 16:36:25 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mStudent Load (0.5ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 87ms (Views: 69.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/6/edit" for ::1 at 2017-11-28 16:46:12 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/students/6/edit"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (129.3ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2017-11-28 16:46:37 -0500
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 258ms (Views: 245.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/school_classes" for ::1 at 2017-11-28 16:46:44 -0500
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GmYQu7BIOskgVA/nsaV5DVMM8WaCmEkqsv+AixydlYXGBi+xEEkhM1J80P29KGvNX/G48PNFByOj0oTnC0FRwg==", "school_class"=>{"title"=>"Trash", "room_number"=>"121"}, "commit"=>"Create School class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Trash"], ["room_number", 121], ["created_at", "2017-11-28 21:46:44.963846"], ["updated_at", "2017-11-28 21:46:44.963846"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/school_classes/11
+Completed 302 Found in 12ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/school_classes/11" for ::1 at 2017-11-28 16:46:44 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSchoolClass Load (0.6ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered school_classes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 86ms (Views: 74.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/school_classes/11/edit" for ::1 at 2017-11-28 16:46:51 -0500
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered school_classes/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 90ms (Views: 89.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/11" for ::1 at 2017-11-28 16:46:55 -0500
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FBsAWqF0YXCAgBDuSyC4WFd9eSyp4vii3AkT+GX56d7Iez9QAXV6ivKoz/RHraqYW4Awutg/tqvNJBeUciUtmQ==", "school_class"=>{"title"=>"Trash", "room_number"=>"111"}, "commit"=>"Update School class", "id"=>"11"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `SchoolClass' for #<SchoolClassesController:0x007fe0a8b5a708>
+Did you mean?  school_class_url):
+  app/controllers/school_classes_controller.rb:24:in `update'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.8ms)
+
+
+Started GET "/school_classes/11" for ::1 at 2017-11-28 16:47:50 -0500
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered school_classes/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 100ms (Views: 80.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/students/1" for ::1 at 2017-11-28 16:48:28 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 73ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2017-11-28 16:48:37 -0500
+
+ActionController::RoutingError (No route matches [GET] "/students/1/edit"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (50.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.9ms)
+
+
+Started GET "/student/1/edit" for ::1 at 2017-11-28 16:49:12 -0500
+
+ActionController::RoutingError (No route matches [GET] "/student/1/edit"):
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/paul/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.8ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.0ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/paul/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.1ms)
+
+
+Started GET "/students/1/edit" for ::1 at 2017-11-28 16:50:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered students/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 248ms (Views: 215.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/students/1" for ::1 at 2017-11-28 16:50:25 -0500
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tx/Zi1g/+SVVZ8vpaSASDsr97THtFY5psyOAVmYTPvKTf+aB+D7i3ydPFPNlrQDOxgCkp5zIwGCiDoQ6cc/6tQ==", "student"=>{"first_name"=>"Jordan", "last_name"=>"gruff"}, "commit"=>"Update Student", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "students" SET "last_name" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["last_name", "gruff"], ["updated_at", "2017-11-28 21:50:25.374254"], ["id", 1]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/students/1
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/students/1" for ::1 at 2017-11-28 16:50:25 -0500
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered students/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 89ms (Views: 87.0ms | ActiveRecord: 0.2ms)
